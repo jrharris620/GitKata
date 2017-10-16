@@ -15,62 +15,62 @@ namespace GitKata
                 new Question
                 {
                     Text =  "First we need to make a directory name 'test'",
-                    DesiredAnswer = new [] {"mkdir test"}
+                    DesiredAnswers = new [] {"mkdir test"}
                 },
                 new Question
                 {
                     Text= "Now we need to change into that directory",
-                    DesiredAnswer = new [] {"cd test"}
+                    DesiredAnswers = new [] {"cd test"}
                 },
                 new Question
                 {
                     Text = "Let's init our new repository!",
-                    DesiredAnswer = new [] {"git init"}
+                    DesiredAnswers = new [] {"git init"}
                 },
                 new Question
                 {
                     Text="Let's add all of the files",
-                    DesiredAnswer = new [] {"git add *" , ""}
+                    DesiredAnswers = new [] {"git add *" , "git add ."}
                 },
                 new Question
                 {
                     Text ="Let's check the status",
-                    DesiredAnswer = new [] {"git status"}
+                    DesiredAnswers = new [] {"git status"}
                 },
                 new Question
                 {
                     Text = "Let's do our first commit with a comment of 'Initial add'",
-                    DesiredAnswer = new [] {"git commit -m \"Initial add\""}
+                    DesiredAnswers = new [] {"git commit -m \"Initial add\""}
                 },
                 new Question
                 {
                     Text = "Everything clean?  Let's check the status again.",
-                    DesiredAnswer = new [] {"git status"}
+                    DesiredAnswers = new [] {"git status"}
                 },
                 new Question
                 {
                     Text="Let's add a remote to push it to named origin with a value of 'user@sourcecontrol.com:gitkata.git'",
-                    DesiredAnswer = new [] {"git remote add origin user@sourcecontrol.com:gitkata.git"}
+                    DesiredAnswers = new [] {"git remote add origin user@sourcecontrol.com:gitkata.git"}
                 },
                 new Question
                 {
                     Text = "Let's push it to origin so we have another copy somewhere",
-                    DesiredAnswer = new [] {"git push origin master"}
+                    DesiredAnswers = new [] {"git push origin master"}
                 },
                 new Question
                 {
                     Text= "Time for another project. Let's go up a directory",
-                    DesiredAnswer = new []{ "cd .."}
+                    DesiredAnswers = new []{ "cd .."}
                 },
                 new Question
                 {
                     Text = "Let's clone a new project from 'user@someplace.com:projectname.git'",
-                    DesiredAnswer = new []{ "git clone user@someplace.com:projectname.git"}
+                    DesiredAnswers = new []{ "git clone user@someplace.com:projectname.git"}
                 },
                 new Question
                 {
                     Text = "What remote urls do we have?",
-                    DesiredAnswer = new []{ "git remote -v"}
+                    DesiredAnswers = new []{ "git remote -v"}
                 }
             };
 

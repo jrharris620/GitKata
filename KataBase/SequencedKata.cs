@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 
 namespace KataBase
 {
@@ -19,12 +20,9 @@ namespace KataBase
         /// <returns></returns>
         public override Question AnswerQuestionAndGetNext(string answer)
         {
-            var isCorrect = false;
+            var isCorrect = Questions[_index].DesiredAnswers.Contains(answer);
 
-            foreach (var ans in Questions[_index].DesiredAnswer)
-            {
-                if (ans == answer) isCorrect = true;
-            }
+            
 
             if (isCorrect)
             {
