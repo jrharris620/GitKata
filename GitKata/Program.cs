@@ -83,6 +83,8 @@ namespace GitKata
 
             }
 
+            Console.WriteLine("Congratulations, you've defeated me.  Press enter to quit");
+            Console.ReadLine();
 
         }
 

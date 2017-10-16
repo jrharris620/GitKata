@@ -12,6 +12,11 @@ namespace KataBase
 
         public decimal Grade => AnswerQueue.Grade;
 
+        public override bool ShouldContinue
+        {
+            get { return AnswerQueue.Count < Questions.Count || AnswerQueue.Grade < MinimumGrade; }
+        }
+
         public override Question AnswerQuestionAndGetNext(string answer)
         {
             var isCorrect = Questions[_index].DesiredAnswer == answer;
@@ -39,8 +44,9 @@ namespace KataBase
 
             if (isCorrect)
             {
-                if (_index + 1 >= Questions.Count) _index=-1;
-                return Questions[++_index];
+                _index++;
+                if (_index >= Questions.Count) { _index = 0; }
+                
             }
             return Questions[_index];
         }
