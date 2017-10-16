@@ -19,34 +19,40 @@ namespace KataBase
         /// <returns></returns>
         public override Question AnswerQuestionAndGetNext(string answer)
         {
-            var isCorrect = Questions[_index].DesiredAnswer == answer;
+            var isCorrect = false;
+            foreach (var ans in Questions[_index].DesiredAnswer)
+            {
+                if (ans == answer) isCorrect = true;
+            }
+
             if (isCorrect)
             {
-                var correctResponses = new [] {"Nice!", "Good work", "Keep it up"};
+                var correctResponses = new[] { "Nice!", "Good work", "Keep it up" };
                 Console.WriteLine(correctResponses.GetRandom());
                 //execute and pipe output to the user
-//                ProcessStartInfo start = new ProcessStartInfo();
-//                start.FileName = "cmd";
-//                start.WorkingDirectory = Environment.CurrentDirectory;
-//                start.Arguments = answer;
-//                start.UseShellExecute = false;
-//                start.RedirectStandardOutput = true;
-//              
-//                start.RedirectStandardInput = true;
-//                start.CreateNoWindow = true;
-//                Process.Start(start);
+                //                ProcessStartInfo start = new ProcessStartInfo();
+                //                start.FileName = "cmd";
+                //                start.WorkingDirectory = Environment.CurrentDirectory;
+                //                start.Arguments = answer;
+                //                start.UseShellExecute = false;
+                //                start.RedirectStandardOutput = true;
+                //              
+                //                start.RedirectStandardInput = true;
+                //                start.CreateNoWindow = true;
+                //                Process.Start(start);
             }
             else
             {
                 Console.WriteLine("Errr..  Try again please");
+
             }
             AnswerQueue.Enqueue(new TrueFalseAnswer(isCorrect));
-
             if (isCorrect)
             {
-                if (_index + 1 >= Questions.Count) _index=-1;
+                if (_index + 1 >= Questions.Count) _index = -1;
                 return Questions[++_index];
             }
+
             return Questions[_index];
         }
 

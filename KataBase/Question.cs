@@ -5,7 +5,7 @@
         /// <summary>
         /// The desired text
         /// </summary>
-        public string DesiredAnswer { get; set; }
+        public string[] DesiredAnswer { get; set; }
 
         /// <summary>
         /// The question that prompts the user.

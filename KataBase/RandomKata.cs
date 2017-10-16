@@ -8,7 +8,7 @@ namespace KataBase
         
         public override Question AnswerQuestionAndGetNext(string answer)
         {
-            var isCorrect = _currentQuestion.DesiredAnswer == answer;
+            var isCorrect = Equals(_currentQuestion.DesiredAnswer, answer);
             AnswerQueue.Enqueue(new TrueFalseAnswer(isCorrect));
             if (isCorrect)
                 _currentQuestion = Questions.GetRandom();
