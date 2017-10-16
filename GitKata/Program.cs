@@ -80,15 +80,11 @@ namespace GitKata
                 Console.WriteLine("[{0}] {1}", kata.Grade, ques.Text);
                 var ans = Console.ReadLine();
                 ques = kata.AnswerQuestionAndGetNext(ans);
-
             }
 
             Console.WriteLine("Congratulations, you've defeated me.  Press enter to quit");
             Console.ReadLine();
-
         }
-
-
     }
 }
 

@@ -11,6 +11,5 @@
         /// The question that prompts the user.
         /// </summary>
         public string Text { get; set; }
-    
     }
 }

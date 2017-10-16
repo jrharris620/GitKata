@@ -41,7 +41,7 @@ namespace KataBase
                 Console.WriteLine("Errr..  Try again please");
             }
             AnswerQueue.Enqueue(new TrueFalseAnswer(isCorrect));
-
+            
             if (isCorrect)
             {
                 _index++;
@@ -56,6 +56,5 @@ namespace KataBase
             if (Questions.Count == 0) return null;
             return Questions[0];
         }
-
     }
 }

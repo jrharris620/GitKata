@@ -23,9 +23,7 @@ namespace KataBase
 
 
         public virtual bool ShouldContinue => true;
-        //TODO : Fix
-           // AnswerQueue.Count >= Questions.Count || MinimumGrade < AnswerQueue.Grade;
-
+       
         /// <summary>
         /// Pushes the answer onto the AnswerQueue
         /// </summary>

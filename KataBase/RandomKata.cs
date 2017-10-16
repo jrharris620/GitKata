@@ -15,13 +15,10 @@ namespace KataBase
             return _currentQuestion;
         }
 
-
         public override Question GetFirstQuestion()
         {
             _currentQuestion = Questions.GetRandom();
             return _currentQuestion;
         }
-
-
     }
 }
