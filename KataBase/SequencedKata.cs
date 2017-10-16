@@ -11,13 +11,18 @@ namespace KataBase
         }
 
         public decimal Grade => AnswerQueue.Grade;
-
+        
+        /// <summary>
+        /// Answers the current question, records the grade and returns the next question.
+        /// </summary>
+        /// <param name="answer"></param>
+        /// <returns></returns>
         public override Question AnswerQuestionAndGetNext(string answer)
         {
             var isCorrect = Questions[_index].DesiredAnswer == answer;
             if (isCorrect)
             {
-                var correctResponses = new[] {"Nice!", "Good work", "Keep it up"};
+                var correctResponses = new [] {"Nice!", "Good work", "Keep it up"};
                 Console.WriteLine(correctResponses.GetRandom());
                 //execute and pipe output to the user
 //                ProcessStartInfo start = new ProcessStartInfo();
