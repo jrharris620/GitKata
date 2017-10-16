@@ -30,7 +30,7 @@ namespace GitKata
                 new Question
                 {
                     Text="Let's add all of the files",
-                    DesiredAnswer = new [] {"git add *" , "git add ."}
+                    DesiredAnswer = new [] {"git add *" , ""}
                 },
                 new Question
                 {

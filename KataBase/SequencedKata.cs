@@ -20,6 +20,7 @@ namespace KataBase
         public override Question AnswerQuestionAndGetNext(string answer)
         {
             var isCorrect = false;
+
             foreach (var ans in Questions[_index].DesiredAnswer)
             {
                 if (ans == answer) isCorrect = true;
