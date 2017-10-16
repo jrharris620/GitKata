@@ -13,12 +13,12 @@ namespace GitKata
             {
                 new Question
                 {
-                    Text =  "First we need to make a directory name 'test'",
+                    Text = "First we need to make a directory name 'test'",
                     DesiredAnswer = "mkdir test"
                 },
                 new Question
                 {
-                    Text= "Now we need to change into that directory",
+                    Text = "Now we need to change into that directory",
                     DesiredAnswer = "cd test"
                 },
                 new Question
@@ -28,12 +28,12 @@ namespace GitKata
                 },
                 new Question
                 {
-                    Text="Let's add all of the files",
+                    Text = "Let's add all of the files",
                     DesiredAnswer = "git add *"
                 },
                 new Question
                 {
-                    Text ="Let's check the status",
+                    Text = "Let's check the status",
                     DesiredAnswer = "git status"
                 },
                 new Question
@@ -48,7 +48,7 @@ namespace GitKata
                 },
                 new Question
                 {
-                    Text="Let's add a remote to push it to named origin with a value of 'user@sourcecontrol.com:gitkata.git'",
+                    Text = "Let's add a remote to push it to named origin with a value of 'user@sourcecontrol.com:gitkata.git'",
                     DesiredAnswer = "git remote add origin user@sourcecontrol.com:gitkata.git"
                 },
                 new Question
@@ -58,7 +58,7 @@ namespace GitKata
                 },
                 new Question
                 {
-                    Text= "Time for another project. Let's go up a directory",
+                    Text = "Time for another project. Let's go up a directory",
                     DesiredAnswer = "cd .."
                 },
                 new Question
@@ -77,14 +77,16 @@ namespace GitKata
             var ques = kata.GetFirstQuestion();
             while (kata.ShouldContinue)
             {
-                Console.WriteLine("[{0}] {1}", kata.Grade , ques.Text);
+                Console.WriteLine("[{0}] {1}", kata.Grade, ques.Text);
                 var ans = Console.ReadLine();
-                ques =  kata.AnswerQuestionAndGetNext(ans);
+                ques = kata.AnswerQuestionAndGetNext(ans);
 
             }
 
-            Console.WriteLine("Congratulations, you've defeated me.  Press enter to quit");
-            Console.ReadLine();
+
         }
+
+
     }
 }
+

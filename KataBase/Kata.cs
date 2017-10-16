@@ -38,5 +38,10 @@ namespace KataBase
         /// </summary>
         /// <returns></returns>
         public abstract Question GetFirstQuestion();
+
+        public abstract Question GetLastQuestion();
+
+
+
     }
 }

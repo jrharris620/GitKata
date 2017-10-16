@@ -21,5 +21,7 @@ namespace KataBase
             _currentQuestion = Questions.GetRandom();
             return _currentQuestion;
         }
+
+
     }
 }
